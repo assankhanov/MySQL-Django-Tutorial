@@ -42,6 +42,7 @@ $ python3 -m venv .projectEnv
 $ .projectEnv\Scripts\activate.bat
 ```
 
+<img src="images/step3.PNG" alt="step3">
 
 ## 4. Installing Django and MySQL client
 4.1. Install Django packages
