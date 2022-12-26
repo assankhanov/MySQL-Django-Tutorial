@@ -43,6 +43,7 @@ $ .projectEnv\Scripts\activate.bat
 $ pip install django
 ```
 ![step4.1](images/step4.1.PNG)
+
 4.2. Install MySQL client for python
 ```
 $ pip install mysqlclient
@@ -56,12 +57,14 @@ Start Django project called “category” using django-admin tool
 $ django-admin startproject category 
 ```
 After that our current working directory should look like this:
+
 ![step5](images/step5.PNG)
 
 
 ## 6. Change to project folder
 6.1. Mark the project directory as root: Right click on project folder -> Mark Directory as -> Sources Root
 ![step6.1](images/step6.1.PNG)
+
 6.2. Change into project directory in terminal
 ```
 $ cd category 
@@ -70,6 +73,7 @@ $ cd category
 
 ## 7. Create the new Django application
 Create Django application called “myApp”
+
 ![step7](images/step7.PNG)
 
 
