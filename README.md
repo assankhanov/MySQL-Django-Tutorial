@@ -165,7 +165,7 @@ First, we need to set up the views.py.
 Define the function “display” as following:
 
 views.py
-```
+```python
 from django.shortcuts import render
 from django.db import connection
 
@@ -208,7 +208,7 @@ def display(request):
 13.5. Add the following to index.html
 
 index.html
-```
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -259,7 +259,7 @@ After that,we need to create urls in urls.py to have access to views.
 Update the urls.py file as following:
 
 urls.py
-```
+```python
 from django.urls import path
 from myApp import views
 
