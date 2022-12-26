@@ -41,22 +41,22 @@ $ python3 -m venv .projectEnv
 ```
 $ .projectEnv\Scripts\activate.bat
 ```
-![step3](images/step3.PNG)
 
+<img src="images/step3.PNG" alt="step3" width="525" height="349">
 
 ## 4. Installing Django and MySQL client
 4.1. Install Django packages
 ```
 $ pip install django
 ```
-![step4.1](images/step4.1.PNG)
+<img src="images/step4.1.PNG" alt="step4.1" width="255" height="41">
+
 
 4.2. Install MySQL client for python
 ```
 $ pip install mysqlclient
 ```
-![step4.2](images/step4.2.PNG)
-
+<img src="images/step4.2.PNG" alt="step4.2" width="274" height="41">
 
 ## 5. Create the new Django project
 Start Django project called “category” using django-admin tool
@@ -80,6 +80,9 @@ $ cd category
 
 ## 7. Create the new Django application
 Create Django application called “myApp”
+```
+$ python manage.py startapp myApp 
+```
 
 ![step7](images/step7.PNG)
 
