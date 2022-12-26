@@ -14,8 +14,8 @@ Simple tutorial how create Django application, connect it to MySQL Database and 
     - Enter the MySQL Root password which will be strong and which you can remember
 ![step2](images/step2.PNG)
 
+
 ## 3. Initializing a new virtual environment 
- 
 3.1. Create working directory 
 (in this example it is a folder called “project”)
 
@@ -35,3 +35,44 @@ $ python3 -m venv .projectEnv
 $ .projectEnv\Scripts\activate.bat
 ```
 ![step3](images/step3.PNG)
+
+
+## 4. Installing Django and MySQL client
+4.1. Install Django packages
+```
+$ pip install django
+```
+![step4.1](images/step4.1.PNG)
+4.2. Install MySQL client for python
+```
+$ pip install mysqlclient
+```
+![step4.2](images/step4.2.PNG)
+
+
+## 5. Create the new Django project
+Start Django project called “category” using django-admin tool
+```
+$ django-admin startproject category 
+```
+After that our current working directory should look like this:
+![step5](images/step5.PNG)
+
+
+## 6. Change to project folder
+6.1. Mark the project directory as root: Right click on project folder -> Mark Directory as -> Sources Root
+![step6.1](images/step6.1.PNG)
+6.2. Change into project directory in terminal
+```
+$ cd category 
+```
+![step6.2](images/step6.2.PNG)
+
+## 7. Create the new Django application
+Create Django application called “myApp”
+![step7](images/step7.PNG)
+
+
+
+
+
