@@ -1,6 +1,13 @@
-# MySQL-Django-Tutorial
-Simple tutorial how create Django application, connect it to MySQL Database and perform MySQL queries in Django application.
+<br />
+<p align="center">
+    <img src="images/logo.PNG" alt="Logo" width="290" height="128">
+  </a>
 
+  <h3 align="center">MySQL-Django-Tutorial</h3>
+  <p align="center">
+   Simple tutorial how create Django application, connect it to MySQL Database and perform MySQL queries in Django application.
+  </p>
+</p>
 
 ## 1. Download MySQL
 - Go to this URL -> https://dev.mysql.com/downloads/mysql/
