@@ -120,7 +120,7 @@ Here we can see that website framework was set up successfully:
 
 10.5. Create database called “categoryDB” and press the button  
 ```
-$ create database categoryDB;
+create database categoryDB;
 ```
 ![step10.12](images/step10.345.PNG)
 
@@ -132,7 +132,7 @@ $ create database categoryDB;
 
 10.8. Create table called “Categories” and press the button
 ```
-$ CREATE TABLE Categories (categoryID INT  NOT NULL, categoryName VARCHAR(50), categoryDescription CHAR(100), PRIMARY KEY (categoryID));
+CREATE TABLE Categories (categoryID INT  NOT NULL, categoryName VARCHAR(50), categoryDescription CHAR(100), PRIMARY KEY (categoryID));
 ```
 
 10.9. By pressing update button we can see that our table “Categories” is created
@@ -140,7 +140,7 @@ $ CREATE TABLE Categories (categoryID INT  NOT NULL, categoryName VARCHAR(50), c
 
 10.10. Add records “Categories” table 
 ```
-$ INSERT INTO Categories (categoryID, categoryName,categoryDescription)
+INSERT INTO Categories (categoryID, categoryName,categoryDescription)
 VALUES (1, 'Beverages', 'Soft drinks, coffees, teas, beers, and ales'), (2, 'Condiments', 'Sweet and savory sauces, relishes, spreads, and seasonings'), (3, 'Confections', 'Desserts, candies, and sweet breads'),(4, 'Dairy Products', 'Cheeses'),(5, 'Grains/Cereals', 'Breads, crackers, pasta, and cereal'),(6, 'Meat/Poultry', 'Prepared meats'),(7, 'Produce', 'Dried fruit and bean curd'),(8, 'Seafood', 'Seaweed and fish');
 ```
 ![step10.10](images/step10.10.PNG)
@@ -194,3 +194,85 @@ def display(request):
 
     return render(request, 'myApp/index.html',{"categories": outputCategories, "output1": outputOfQuery1})
 ```
+
+## 13. Creating templates
+13.1. In settings.py add path to “templates” which will store the templates used by application 
+
+13.2. In the myApp directory, create templates directory and inside of it create another directory which will have same name as the application
+
+13.3. Then right click on new created directory “myApp”-> Press New->HTML File
+
+13.4. Name it as “index” and press enter
+![step13](images/step13.PNG)
+
+13.5. Add the following to index.html
+
+index.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Categories Database:</title>
+</head>
+<body>
+<h2>Categories table</h2>
+<table>
+    <thead>
+        <tr>
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+    </tr>
+    </thead>
+{% for category in categories %}
+    <tr>
+        <td>{{ category.categoryid }}</td>
+        <td>{{ category.categoryname }}</td>
+        <td>{{ category.categorydescription }}</td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<h2>Example query result:</h2>
+<table>
+    <thead>
+        <tr>
+            <th>category name</th>
+            <th>category description</th>
+    </tr>
+    </thead>
+{% for i in output1 %}
+    <tr>
+        <td>{{ i.categoryname }}</td>
+        <td>{{ i.categorydescription }}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
+```
+
+## 14. Creating URLs
+After that,we need to create urls in urls.py to have access to views. 
+Update the urls.py file as following:
+
+urls.py
+```
+from django.urls import path
+from myApp import views
+
+urlpatterns = [
+    path('', views.display, name='index'),
+]
+```
+
+## 15. Run the development server
+Running the server:
+```
+$ python manage.py runserver
+```
+We should get following output:
+
+![step15](images/stepfinal.PNG)
